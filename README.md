@@ -1,43 +1,38 @@
-# testing_music_player
+# Music Player App
 
 ![App Icon](lib/assets/launcher_icon.png)
 
-A Music Player App developed using Flutter with Riverpod as state management system, Isar (Community Version) as database system, and just_audio (Experimenting Version with Waveform visualizer + just_audio_background) package to interact with audio files.
-This app was made to learn and experiment with Flutter and different packages, systems.
+A music player built with Flutter, using Riverpod for state management, Isar (Community Edition) as the database, and the `just_audio` package (with Waveform visualizer and background playback). This app serves as an experiment with various Flutter tools and libraries.
 
-App allows user to:
-- Create and edit (playlist's name, image, and songs stored) playlists.
-- Add and remove songs by prompting user to input songs' names, artists' names (optional), and audio files (aac, amr, flac, mp3, mp4, m4a, wav, oog, opus).
-- Interact with songs (play, pause, loop, shuffle, skip, drag & drop to change positions in lists).
-- Sort playlists by names, and songs (both in main song list and in playlists) by names, artists, and durations.
-- Search for playlists and songs by names.
-- Play and interact with songs in the background using notification bar.
+### Features:
+- Create and manage playlists (edit names, images, songs).
+- Add or remove songs with details (optional artist name) and supported audio formats: aac, amr, flac, mp3, mp4, m4a, wav, oog, opus.
+- Play, pause, loop, shuffle, skip, and reorder songs.
+- Sort playlists and songs by name, artist, and duration.
+- Search for playlists and songs by name.
+- Background playback with notification bar controls.
 
-Notes:
-- Microphone Permission required for the application to run properly. If permission is denied, app will automatically close until permission is given.
-- Only the stated file formats above are tested and working properly. Changes will needed to be made in lib/src/ui/components/dialog.dart to process/test different formats.
-- Song files are saved to the database by file paths in device's storage. Songs will not be played properly if files are deleted. 
-- Although much testing was conducted and many bugs were fixed, errors and bugs may still occur, especially when a playlist is interacted with (add, delete, sort, etc. songs) while a different playlist is playing. Errors SHOULDN'T occur for most of the normal usages.
-- The app runs, yet the code is horrendous and very brute force-ish in many parts because of the library's capability (2nd revision, this point still stands).
+### Notes:
+- Microphone permission is required for functionality; the app closes if permission is denied.
+- Only specified audio formats are fully tested.
+- Song paths are stored in the database; songs won’t play if files are deleted.
+- Potential bugs may arise when interacting with playlists during playback.
 
-# Things Learned From Making This App
-
+### Key Learnings:
 1. Isar Database
 2. CustomPainter
 3. StreamBuilder
-4. Using just_audio, permission_handler, and path_provider
-5. It requires VERY extensive planning to make a large app with elegant codes 
-6. Type/Function Alias (Although none was used in this project as it was known, admittedly, too late and far into the project)
-7. Modify packages and use modified packages from repo urls.
+4. Usage of just_audio, permission_handler, and path_provider
+5. Importance of extensive planning for large apps
+6. Type/Function Aliases
+7. Package modification and usage via repo URLs
 8. SearchDelegate
-9. ReorderableListView (For drag & drop function)
-10. Sort one list depending on the sorting in another list using map (For different sorting types)
+9. ReorderableListView for drag-and-drop
+10. Sorting one list based on another
 
-
-# Things Reinforced From Making This App
-
-1. Building Project Structure
-2. Making helper and util functions
-3. Using Riverpod state management system
-4. Creating different app screens/states and navigator
-5. Learn more about Flutter and experiment with different widgets 
+### Skills Reinforced:
+1. Structuring projects
+2. Writing utility functions
+3. Implementing Riverpod state management
+4. Managing app screens and navigation
+5. Experimenting with Flutter widgets
